@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Приют «Четыре лапы» - Снежное</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+
+    #navToggle:checked ~ .navbar-collapse { display: block; }
+    @media (max-width: 991.98px) {
+      .navbar-collapse { padding-top: 1rem; padding-bottom: 1rem; }
+    }
+
+    .bg-warm { background-color: #5c3a21; }
+    .text-warm { color: #5c3a21; }
+
+    .hero-tall { min-height: 82vh; }
+
+    .thumb {
+      width: 110px;
+      height: 110px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      border-radius: 1rem;
+    }
+    .thumb-lg {
+      width: 100%;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9rem;
+      border-radius: 1rem;
+    }
+
+    .form-control:user-invalid ~ .invalid-feedback,
+    .form-select:user-invalid ~ .invalid-feedback,
+    .form-check-input:user-invalid ~ .invalid-feedback { display: block; }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warm py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#home">
+          <i class="fa-solid fa-paw text-warning me-2"></i>Четыре лапы
+        </a>
+
+        <input type="checkbox" id="navToggle" class="d-none">
+        <label class="navbar-toggler" for="navToggle" role="button" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </label>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#about">О приюте</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pets">Питомцы</a></li>
+            <li class="nav-item"><a class="nav-link" href="#help">Помощь</a></li>
+            <li class="nav-item"><a class="nav-link" href="#adopt">Анкета</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+          </ul>
+          <a href="#adopt" class="btn btn-warning fw-semibold ms-lg-3">
+            <i class="fa-solid fa-heart me-1"></i>Усыновить
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1">
+
+    <section id="home" class="bg-warm text-white hero-tall d-flex align-items-center">
+      <div class="container py-5 text-center">
+        <i class="fa-solid fa-paw text-warning opacity-50 mb-4" style="font-size: 3rem;"></i>
+
+        <h1 class="display-3 fw-bold mb-4 lh-sm">
+          Каждая лапа<br>ищет свой дом
+        </h1>
+
+        <p class="lead fs-5 text-white-50 mx-auto mb-5" style="max-width: 700px;">
+          «Четыре лапы» - приют для бездомных животных в Снежном.
+          У нас живут 180 собак и кошек. Каждая из них очень ждёт своего человека.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+          <a href="#pets" class="btn btn-warning btn-lg px-5 fw-semibold">
+            <i class="fa-solid fa-paw me-2"></i>Смотреть питомцев
+          </a>
+          <a href="#help" class="btn btn-outline-light btn-lg px-5">Как помочь</a>
+        </div>
+
+        <div class="row row-cols-3 g-4 border-top border-light border-opacity-25 pt-5 mt-5 mx-auto" style="max-width: 720px;">
+          <div class="col">
+            <div class="display-5 fw-bold text-warning mb-1">180</div>
+            <small class="text-white-50 text-uppercase">питомцев</small>
+          </div>
+          <div class="col">
+            <div class="display-5 fw-bold text-warning mb-1">950</div>
+            <small class="text-white-50 text-uppercase">усыновлений</small>
+          </div>
+          <div class="col">
+            <div class="display-5 fw-bold text-warning mb-1">4</div>
+            <small class="text-white-50 text-uppercase">года работы</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5">
+      <div class="container py-lg-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="thumb-lg bg-warm text-warning">
+              <i class="fa-solid fa-dog"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-7 ps-lg-5">
+            <span class="badge text-bg-warning mb-3 px-3 py-2">О приюте</span>
+            <h2 class="display-5 fw-bold mb-4">
+              Мы забираем животных с улицы<br>и находим им семьи
+            </h2>
+
+            <p class="text-secondary fs-5 mb-4">
+              Приют «Четыре лапы» открылся в 2021 году. Сегодня это
+              большая территория с вольерами, собственной ветеринарной
+              комнатой и командой из 18 волонтёров.
+            </p>
+
+            <div class="row row-cols-1 row-cols-sm-2 g-4 mt-4">
+              <div class="col">
+                <div class="d-flex">
+                  <i class="fa-solid fa-stethoscope fa-2x text-warning me-3"></i>
+                  <div>
+                    <div class="fw-bold mb-1">Лечение</div>
+                    <p class="text-secondary small mb-0">
+                      Вакцинация, стерилизация и полный осмотр ветеринара
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex">
+                  <i class="fa-solid fa-shield-heart fa-2x text-warning me-3"></i>
+                  <div>
+                    <div class="fw-bold mb-1">Забота</div>
+                    <p class="text-secondary small mb-0">
+                      Ежедневный выгул, игры и внимание к каждому
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex">
+                  <i class="fa-solid fa-hand-holding-heart fa-2x text-warning me-3"></i>
+                  <div>
+                    <div class="fw-bold mb-1">Подбор семьи</div>
+                    <p class="text-secondary small mb-0">
+                      Учитываем характер питомца и образ жизни хозяина
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex">
+                  <i class="fa-solid fa-headset fa-2x text-warning me-3"></i>
+                  <div>
+                    <div class="fw-bold mb-1">Поддержка</div>
+                    <p class="text-secondary small mb-0">
+                      Куратор остаётся на связи и после усыновления
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pets" class="py-5 bg-body-tertiary">
+      <div class="container py-lg-5">
+        <div class="row align-items-end mb-5">
+          <div class="col-md-8">
+            <span class="badge text-bg-warning mb-3 px-3 py-2">Наши подопечные</span>
+            <h2 class="display-5 fw-bold mb-2">Ищут свой дом</h2>
+            <p class="text-secondary mb-0">
+              Познакомьтесь с нашими ребятами - каждый готов к переезду
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <a href="#adopt" class="btn btn-warning px-4 fw-semibold">
+              Заполнить анкету
+            </a>
+          </div>
+        </div>
+
+        <article class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 bg-white border rounded-3 mb-3">
+          <div class="thumb bg-warm text-warning mx-auto mx-md-0">
+            <i class="fa-solid fa-dog"></i>
+          </div>
+          <div class="flex-grow-1 text-center text-md-start">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2 mb-2">
+              <h3 class="h4 fw-bold mb-0">Бублик</h3>
+              <span class="badge text-bg-warning align-self-center align-self-md-auto">2 года · Метис · 18 кг</span>
+            </div>
+            <p class="text-secondary small mb-0">
+              Обожает прогулки, любит играть с мячом. Очень ласковый
+              и активный. Идеален для семьи с детьми.
+            </p>
+          </div>
+          <a href="#adopt" class="btn btn-warning align-self-center align-self-md-auto">
+            Хочу усыновить
+          </a>
+        </article>
+
+        <article class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 bg-white border rounded-3 mb-3">
+          <div class="thumb bg-warm text-warning mx-auto mx-md-0">
+            <i class="fa-solid fa-cat"></i>
+          </div>
+          <div class="flex-grow-1 text-center text-md-start">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2 mb-2">
+              <h3 class="h4 fw-bold mb-0">Муся</h3>
+              <span class="badge text-bg-warning align-self-center align-self-md-auto">1 год · Домашняя · 3 кг</span>
+            </div>
+            <p class="text-secondary small mb-0">
+              Спокойная, приучена к лотку. Обожает сидеть на коленях
+              и тихо мурчать.
+            </p>
+          </div>
+          <a href="#adopt" class="btn btn-warning align-self-center align-self-md-auto">
+            Хочу усыновить
+          </a>
+        </article>
+
+        <article class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 bg-white border rounded-3 mb-3">
+          <div class="thumb bg-warm text-warning mx-auto mx-md-0">
+            <i class="fa-solid fa-dog"></i>
+          </div>
+          <div class="flex-grow-1 text-center text-md-start">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2 mb-2">
+              <h3 class="h4 fw-bold mb-0">Джек</h3>
+              <span class="badge text-bg-warning align-self-center align-self-md-auto">4 года · Овчарка · 28 кг</span>
+            </div>
+            <p class="text-secondary small mb-0">
+              Умный и послушный, знает базовые команды. Отличный
+              охранник для частного дома.
+            </p>
+          </div>
+          <a href="#adopt" class="btn btn-warning align-self-center align-self-md-auto">
+            Хочу усыновить
+          </a>
+        </article>
+
+        <article class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 bg-white border rounded-3 mb-3">
+          <div class="thumb bg-warm text-warning mx-auto mx-md-0">
+            <i class="fa-solid fa-cat"></i>
+          </div>
+          <div class="flex-grow-1 text-center text-md-start">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2 mb-2">
+              <h3 class="h4 fw-bold mb-0">Персик</h3>
+              <span class="badge text-bg-warning align-self-center align-self-md-auto">3 года · Пушистая · 4 кг</span>
+            </div>
+            <p class="text-secondary small mb-0">
+              Независимая красавица. Привязывается к хозяину раз
+              и навсегда.
+            </p>
+          </div>
+          <a href="#adopt" class="btn btn-warning align-self-center align-self-md-auto">
+            Хочу усыновить
+          </a>
+        </article>
+
+        <article class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 bg-white border rounded-3 mb-3">
+          <div class="thumb bg-warm text-warning mx-auto mx-md-0">
+            <i class="fa-solid fa-dog"></i>
+          </div>
+          <div class="flex-grow-1 text-center text-md-start">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2 mb-2">
+              <h3 class="h4 fw-bold mb-0">Лаки</h3>
+              <span class="badge text-bg-warning align-self-center align-self-md-auto">5 лет · Лабрадор · 26 кг</span>
+            </div>
+            <p class="text-secondary small mb-0">
+              Добрая семейная собака. Отлично ладит с детьми
+              и другими животными.
+            </p>
+          </div>
+          <a href="#adopt" class="btn btn-warning align-self-center align-self-md-auto">
+            Хочу усыновить
+          </a>
+        </article>
+
+        <article class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 bg-white border rounded-3">
+          <div class="thumb bg-warm text-warning mx-auto mx-md-0">
+            <i class="fa-solid fa-cat"></i>
+          </div>
+          <div class="flex-grow-1 text-center text-md-start">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2 mb-2">
+              <h3 class="h4 fw-bold mb-0">Дымок</h3>
+              <span class="badge text-bg-warning align-self-center align-self-md-auto">2 года · Домашний · 5 кг</span>
+            </div>
+            <p class="text-secondary small mb-0">
+              Игривый и разговорчивый. Найден на улице зимой,
+              сейчас полностью здоров.
+            </p>
+          </div>
+          <a href="#adopt" class="btn btn-warning align-self-center align-self-md-auto">
+            Хочу усыновить
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="help" class="bg-warm text-white py-5">
+      <div class="container py-lg-5">
+        <div class="text-center mb-5">
+          <span class="badge text-bg-warning mb-3 px-3 py-2">Поддержать приют</span>
+          <h2 class="display-5 fw-bold mb-3">Как помочь</h2>
+          <p class="text-white-50 mb-0 mx-auto" style="max-width: 560px;">
+            Приют существует только на пожертвования неравнодушных людей.
+            Выберите удобный способ.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-5 mt-4">
+          <div class="col">
+            <div class="display-4 fw-bold text-warning mb-3">01</div>
+            <h3 class="h4 fw-bold mb-2">Пожертвование</h3>
+            <p class="text-white-50 small mb-0">
+              Любая сумма идёт на корм, лекарства и оплату
+              коммунальных услуг приюта.
+            </p>
+          </div>
+
+          <div class="col">
+            <div class="display-4 fw-bold text-warning mb-3">02</div>
+            <h3 class="h4 fw-bold mb-2">Волонтёрство</h3>
+            <p class="text-white-50 small mb-0">
+              Помогите с выгулом, уборкой или просто приезжайте
+              поиграть с животными.
+            </p>
+          </div>
+
+          <div class="col">
+            <div class="display-4 fw-bold text-warning mb-3">03</div>
+            <h3 class="h4 fw-bold mb-2">Корм и вещи</h3>
+            <p class="text-white-50 small mb-0">
+              Нужны крупы, консервы, поводки и тёплые подстилки.
+              Заберём сами.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="adopt" class="py-5">
+      <div class="container py-lg-5">
+        <div class="row g-5">
+
+          <div class="col-lg-4">
+            <span class="badge text-bg-warning mb-3 px-3 py-2">Усыновление</span>
+            <h2 class="display-5 fw-bold mb-4">
+              Начните путь<br>к новому другу
+            </h2>
+            <p class="text-secondary mb-4">
+              Заполните анкету - куратор свяжется с вами в течение дня,
+              чтобы назначить знакомство с питомцем.
+            </p>
+
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-3">
+                <i class="fa-solid fa-circle-check text-warning me-3 mt-1"></i>
+                <span class="small">Усыновление бесплатное</span>
+              </li>
+              <li class="d-flex mb-3">
+                <i class="fa-solid fa-circle-check text-warning me-3 mt-1"></i>
+                <span class="small">Первая вакцинация включена</span>
+              </li>
+              <li class="d-flex mb-3">
+                <i class="fa-solid fa-circle-check text-warning me-3 mt-1"></i>
+                <span class="small">Испытательный период 30 дней</span>
+              </li>
+              <li class="d-flex">
+                <i class="fa-solid fa-circle-check text-warning me-3 mt-1"></i>
+                <span class="small">Поддержка куратора после переезда</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 p-lg-5">
+
+                <form class="row g-3" action="#" method="post">
+
+                  <div class="col-md-6">
+                    <label for="fullname" class="form-label">
+                      Имя и фамилия <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="fullname" name="fullname"
+                           placeholder="Иван Иванов" required minlength="2"
+                           pattern="[А-Яа-яЁёA-Za-z\s\-]{2,60}">
+                    <div class="invalid-feedback">Укажите имя (минимум 2 буквы).</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">
+                      E-mail <span class="text-danger">*</span>
+                    </label>
+                    <input type="email" class="form-control" id="email" name="email"
+                           placeholder="name@example.com" required>
+                    <div class="invalid-feedback">Введите корректный e-mail.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">
+                      Телефон <span class="text-danger">*</span>
+                    </label>
+                    <input type="tel" class="form-control" id="phone" name="phone"
+                           placeholder="+7 (949) 320-15-08" required
+                           pattern="\+?[0-9\s\-\(\)]{10,18}">
+                    <div class="invalid-feedback">Введите номер телефона (от 10 цифр).</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="city" class="form-label">
+                      Город <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-select" id="city" name="city" required>
+                      <option value="" selected disabled>Выберите город...</option>
+                      <option>Снежное</option>
+                      <option>Донецк</option>
+                      <option>Макеевка</option>
+                      <option>Торез</option>
+                      <option>Шахтёрск</option>
+                      <option>Ростов-на-Дону</option>
+                      <option>Другой</option>
+                    </select>
+                    <div class="invalid-feedback">Выберите город.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="pet" class="form-label">
+                      Кого хотите забрать <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-select" id="pet" name="pet" required>
+                      <option value="" selected disabled>Выберите питомца...</option>
+                      <option>Бублик (метис, 2 года)</option>
+                      <option>Муся (кошка, 1 год)</option>
+                      <option>Джек (овчарка, 4 года)</option>
+                      <option>Персик (кошка, 3 года)</option>
+                      <option>Лаки (лабрадор, 5 лет)</option>
+                      <option>Дымок (кот, 2 года)</option>
+                      <option>Ещё не определился</option>
+                    </select>
+                    <div class="invalid-feedback">Выберите питомца.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="housing" class="form-label">
+                      Тип жилья <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-select" id="housing" name="housing" required>
+                      <option value="" selected disabled>Выберите вариант...</option>
+                      <option>Собственная квартира</option>
+                      <option>Съёмная квартира</option>
+                      <option>Частный дом</option>
+                      <option>Другое</option>
+                    </select>
+                    <div class="invalid-feedback">Укажите тип жилья.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="about" class="form-label">
+                      Расскажите о себе <span class="text-danger">*</span>
+                    </label>
+                    <textarea class="form-control" id="about" name="about" rows="4" required
+                              minlength="20" maxlength="600"
+                              placeholder="Опыт содержания животных, состав семьи, наличие детей..."></textarea>
+                    <div class="invalid-feedback">Напишите хотя бы 20 символов.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
+                      <label class="form-check-label" for="agree">
+                        Я согласен на обработку персональных данных и подтверждаю
+                        ответственность за жизнь животного
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="invalid-feedback">Без согласия анкета не может быть принята.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 d-flex flex-wrap gap-2 pt-2">
+                    <button type="submit" class="btn btn-warning btn-lg px-4 fw-semibold">
+                      <i class="fa-solid fa-paper-plane me-2"></i>Отправить анкету
+                    </button>
+                    <button type="reset" class="btn btn-outline-secondary btn-lg">Очистить</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contacts" class="bg-warm text-white-50 pt-5 pb-4 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+          <h3 class="h5 fw-bold text-white mb-3">
+            <i class="fa-solid fa-paw text-warning me-2"></i>Четыре лапы
+          </h3>
+          <p class="small mb-3">
+            Приют для бездомных животных в Снежном.
+            Работаем с 2021 года на пожертвования людей.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-white-50" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+            <a href="#" class="text-white-50" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" class="text-white-50" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="text-white-50" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4 class="h6 text-white text-uppercase mb-3">Разделы</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none">О приюте</a></li>
+            <li class="mb-2"><a href="#pets" class="text-white-50 text-decoration-none">Питомцы</a></li>
+            <li class="mb-2"><a href="#help" class="text-white-50 text-decoration-none">Помощь</a></li>
+            <li class="mb-2"><a href="#adopt" class="text-white-50 text-decoration-none">Усыновление</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h4 class="h6 text-white text-uppercase mb-3">Контакты</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2">
+              <i class="fa-solid fa-location-dot text-warning me-2"></i>
+              Снежное, ул. Ленина, 53
+            </li>
+            <li class="mb-2">
+              <i class="fa-solid fa-phone text-warning me-2"></i>
+              +7 (949) 320-15-08
+            </li>
+            <li class="mb-2">
+              <i class="fa-solid fa-envelope text-warning me-2"></i>
+              hello@4laps.ru
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h4 class="h6 text-white text-uppercase mb-3">Часы работы</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><i class="fa-regular fa-clock text-warning me-2"></i>Пн-Пт: 9:00 - 19:00</li>
+            <li class="mb-2"><i class="fa-regular fa-clock text-warning me-2"></i>Сб-Вс: 10:00 - 17:00</li>
+            <li class="mb-2"><i class="fa-solid fa-circle-info text-warning me-2"></i>Посещение по записи</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="border-light border-opacity-25 my-4">
+
+      <p class="text-center small mb-0">
+        © 2026 Приют «Четыре лапы». Все права защищены.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
